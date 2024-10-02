@@ -9,25 +9,24 @@ M.base46 = {
 	theme = "onedark",
 }
 
--- 新增 Mason 配置
+-- 新增 Mason related
 M.mason = {
 	pkgs = {
-		-- Go 相关
+		-- Go related
 		"gopls",
 		"golangci-lint",
 		"delve",
-		-- Rust 相关
+		-- Rust realted
 		"rust-analyzer",
-		-- 可以添加其他您需要的包
-		-- C++ 相关
+		-- C++ related
 		"clangd",
 		"clang-format",
 		"codelldb",
 		"cmake-language-server",
-		-- python 相关
+		-- python related
 		"pyright",
 		"isort",
-		-- Java 相关
+		-- Java related
 		"jdtls",
 		"java-debug-adapter",
 		"java-test",

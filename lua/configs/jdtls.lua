@@ -1,6 +1,6 @@
 local function on_attach(client, bufnr)
   require("nvchad.configs.lspconfig").on_attach(client, bufnr)
-  -- 添加Java特定的键位映射
+  -- add java specific key mappings
   local map = vim.keymap.set
   map("n", "<leader>jo", "<cmd>lua require'jdtls'.organize_imports()<CR>", { buffer = bufnr, desc = "Organize Imports" })
   map("n", "<leader>jt", "<cmd>lua require'jdtls'.test_class()<CR>", { buffer = bufnr, desc = "Test Class" })

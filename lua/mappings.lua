@@ -28,13 +28,13 @@ map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugge
 -- rustaceanvim
 map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
 
--- Go 相关的映射
+-- Go related mappings
 map("n", "<leader>gr", "<cmd>GoRun<cr>", { desc = "Go Run" })
 map("n", "<leader>gt", "<cmd>GoTest<cr>", { desc = "Go Test" })
 map("n", "<leader>gi", "<cmd>GoImport<cr>", { desc = "Go Import" })
 map("n", "<leader>gf", "<cmd>GoFmt<cr>", { desc = "Go Format" })
 
--- Go 调试相关的映射
+-- Go debug related mappings
 map("n", "<leader>dgt", "<cmd>lua require'dap-go'.debug_test()<CR>", { desc = "Debug go test" })
 map("n", "<leader>dgl", "<cmd>lua require'dap-go'.debug_last()<CR>", { desc = "Debug last go test" })
 
@@ -42,7 +42,7 @@ map("n", "<leader>dgl", "<cmd>lua require'dap-go'.debug_last()<CR>", { desc = "D
 local hop = require('hop')
 local directions = require('hop.hint').HintDirection
 
--- 单行跳转
+-- single line jump
 map('', 'f', function()
   hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
 end, {remap=true})
@@ -56,7 +56,7 @@ map('', 'T', function()
   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
 end, {remap=true})
 
--- 全局跳转
+-- global jump
 map('n', '<leader><leader>w', function()
   hop.hint_words()
 end, {remap=true, desc = "Hop words"})
@@ -67,22 +67,22 @@ map('n', '<leader><leader>k', function()
   hop.hint_lines({direction = directions.BEFORE_CURSOR})
 end, {remap=true, desc = "Hop lines upward"})
 
--- C++ 相关的映射
+-- C++ related mappings
 map("n", "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>", { desc = "Switch between source/header" })
 map("n", "<leader>ct", "<cmd>ClangdTypeHierarchy<cr>", { desc = "Show type hierarchy" })
 map("n", "<leader>cm", "<cmd>ClangdSymbolInfo<cr>", { desc = "Show symbol info" })
 
--- CMake 相关的映射
+-- CMake related mappings
 map("n", "<leader>cg", "<cmd>CMakeGenerate<cr>", { desc = "CMake Generate" })
 map("n", "<leader>cb", "<cmd>CMakeBuild<cr>", { desc = "CMake Build" })
 map("n", "<leader>cr", "<cmd>CMakeRun<cr>", { desc = "CMake Run" })
 
--- Python 相关的映射
+-- Python related mappings
 map("n", "<leader>pr", "<cmd>!python3 %<cr>", { desc = "运行 Python 文件" })
 map("n", "<leader>pc", "<cmd>lua require('dap-python').test_class()<CR>", { desc = "运行 Python 测试类" })
 map("n", "<leader>ps", "<cmd>lua require('dap-python').debug_selection()<CR>", { desc = "调试 Python 选择" })
 
--- Java 相关的映射
+-- Java related mappings
 map("n", "<leader>jc", "<cmd>lua require('jdtls').compile('full')<CR>", { desc = "Compile Java project" })
 map("n", "<leader>jf", "<cmd>lua require('jdtls').organize_imports()<CR>", { desc = "Organize imports" })
 map("n", "<leader>jt", "<cmd>lua require('jdtls').test_class()<CR>", { desc = "Run test class" })

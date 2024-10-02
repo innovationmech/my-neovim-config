@@ -1,5 +1,5 @@
 return {
-  -- 通用配置
+  -- common config
   {
     "stevearc/conform.nvim",
     opts = require "configs.conform",
@@ -39,7 +39,7 @@ return {
     end,
   },
 
-  -- LSP 管理
+  -- LSP management
   {
     "williamboman/mason.nvim",
     opts = {},
@@ -50,7 +50,7 @@ return {
     opts = {},
   },
 
-  -- Rust 相关配置
+  -- Rust related config
   {
     'mrcjkb/rustaceanvim',
     version = '^5',
@@ -97,7 +97,7 @@ return {
     end
   },
 
-  -- Go 相关配置
+  -- Go related config
   {
     "fatih/vim-go",
     ft = "go",
@@ -128,7 +128,7 @@ return {
     end,
   },
 
-  -- C++ 相关配置
+  -- C++ related config
   {
     "p00f/clangd_extensions.nvim",
     ft = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
@@ -154,7 +154,7 @@ return {
     end,
   },
 
-  -- Python 相关配置
+  -- Python related config
   {
     "mfussenegger/nvim-dap-python",
     ft = "python",
@@ -167,7 +167,7 @@ return {
     end,
   },
 
-  -- 其他配置（如果有的话）
+  -- other config (if any)
   {
     "phaazon/hop.nvim",
     branch = "v2", -- 推荐使用 v2 分支
@@ -177,13 +177,13 @@ return {
     end,
   },
 
-  -- Java 相关配置
+  -- Java related config
   {
     "mfussenegger/nvim-jdtls",
     ft = "java",
   },
 
-  -- Treesitter 配置
+  -- Treesitter related config
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
